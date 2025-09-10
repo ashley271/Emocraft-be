@@ -29,7 +29,7 @@ Weekend Activities (activity, location, people, time)
 - In the morning, Keep working on research project in the room.
 - In afternoon, go to supermarket for food shopping alone or with boyfriend or with roommate.
 - In afternoon, go to Chungang market for clothes shopping alone or with boyfriend or with roommate.
-Emotions in daily life: 기쁨, 슬픔, 지루함, 두려움, 짜증
+Emotions in daily life: joy, sadness, boredom, fear, annoyance
 
 ##Example of diary##
 오늘은 연구가 너무 안 돼서 짜증이 났다.  계속 오류가 나서 해결하느라 시간을 다 보냈다.  내일은 좀 더 잘 되기를 바란다.`

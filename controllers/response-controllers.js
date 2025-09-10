@@ -28,7 +28,7 @@ const askMissingInfor = async (diary, dialog, summary) => {
         ) : ""}
     - Response should be less than 50 words.
     - Ask only one question.
-    - Response in Korean.
+    - Response in English.
 
     Diary: ${diary}`
 
@@ -50,7 +50,7 @@ const recognizeEmotion = async (diaryid, diary, userid, dialog) => {
     
     if (retrievedDiaries.length) {
         task_instruction = `You are a therapeutic helping user explore and understand their feelings more deeply. 
-Do the following tasks. Response should be shorter than 100 words in Korean.
+Do the following tasks. Response should be shorter than 100 words in English.
 1. Recognizes the feelings expressed by the user. When recognizing their emotions, you should care about their past diaries. User may have the similar emotions in the past. Consider these emotions: ${emotionList}
 2. Reflects these emotions back to the user, acting as an emotional mirror.
 3. Validate the client's feelings, making them feel understood and listened to.
@@ -71,7 +71,7 @@ Property "rationale": explain how you generate your response follow instruction.
 Property "emotions": no more than 2 emotions.`
     } else {
         task_instruction = `You are a therapeutic helping user explore and understand their feelings more deeply. 
-Do the following tasks. Response should be shorter than 100 words in Korean.
+Do the following tasks. Response should be shorter than 100 words in English.
 1. Recognizes the feelings expressed by the user. Consider these emotions: ${emotionList}
 2. Reflects these emotions back to the user, acting as an emotional mirror.
 3. Validate the client's feelings, making them feel understood and listened to.
@@ -128,7 +128,7 @@ const reflectNegativeEmotion = async (userid, diaryid, diary, dialog) => {
     
     if (retrievedDiaries.length) {
         task_instruction += `Your task is helping user reflect the reason of their emotions.
-Do the following tasks. For each conversation turn, execute one task only. Response in Korean.
+Do the following tasks. For each conversation turn, execute one task only. Response in English.
 1. Describe what maybe the reason of user's emotion and ask for validation from user. If they have similar emotion in the past, recall it in your response.
 2. Your task is challenge the negative thought by questioning its validity and looking for evidence
 that contradicts it. This can help the individual gain a more balanced perspective and reduce the intensity of their negative emotions.
@@ -148,7 +148,7 @@ Return in JSON format, structured as follows:
 }`
     } else {
     task_instruction += `Your task is helping user reflect the reason of their emotions.
-Do the following tasks. For each conversation turn, execute one task only. Response in Korean.
+Do the following tasks. For each conversation turn, execute one task only. Response in English.
 1. Describe what maybe the reason of user's emotion and ask for validation from user.
 2. Your task is challenge the negative thought by questioning its validity and looking for evidence that contradicts it. This can help the individual gain a more balanced perspective and reduce the intensity of their negative emotions.
 Your response should less than 100 words.
@@ -196,7 +196,7 @@ const reflectPositiveEmotion = async (userid, diaryid, diary, dialog) => {
     if (retrievedDiaries.length) {
         task_instruction = `If user have similar emotion in the past, recall it and encourage user.
 Inquire about details to show your interest in what help them have positive emotions.
-Ask only 1 question at a time. Response in Korean.
+Ask only 1 question at a time. Response in English.
 
 Past diaries:
 ${JSON.stringify(retrievedDiaries)}
@@ -210,7 +210,7 @@ Return in JSON format, structured as follows:
 }`
     } else {
     task_instruction = `Inquire about details to show your interest in what help them have positive emotions.
-Ask only 1 question at a time. Response in Korean.
+Ask only 1 question at a time. Response in English.
 
 Current diary: ${diary}
 
@@ -294,7 +294,7 @@ const generateGoodbye = async (diary, dialog) => {
     - Ask if user have anything want to share.
     - If user want to continue the conversation, you should be a active listener, an empathetic friend and response them.
     - If user want to finish conversation say thank and tell them to click Finish button on the top screen to finish section. 
-    Response should be less than 20 words. Response in Korean.
+    Response should be less than 20 words. Response in English.
     
     Current diary: ${diary}`
     const response = {

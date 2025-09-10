@@ -206,8 +206,8 @@ Don't list similar emotions.
 Don't list more than 2 emotions.
 Consider these emotions: ${emotionList.toString()}
 Return correct format as an array. 
-Example 1: ["기쁨"]
-Example 2: ["분노","슬픔"]
+Example 1: ["Joy"]
+Example 2: ["Anger","Sadness"]
 
 Dialog: ${JSON.stringify(dialog)}
 
@@ -230,7 +230,7 @@ Diary: ${existingDiary.content}
 }
 
 const saveReasoning = async (dialog, diaryid, diary) => {
-    let task_instruction = `Look at the diary and dialog, return cause of user's emotion in the diary. Return in Korean, no more than 50 words.
+    let task_instruction = `Look at the diary and dialog, return cause of user's emotion in the diary. Return in English, no more than 50 words.
     
     Dialog: ${JSON.stringify(dialog)}
     

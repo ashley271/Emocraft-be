@@ -13,7 +13,7 @@ const openai = new OpenAI({
 const recognizeEmotionNoMem = async (diary, userid, dialog) => {
     const emotionList = await getEmotionList(userid)
     let task_instruction = `You are a therapeutic helping user explore and understand their feelings more deeply. 
-Do the following tasks. Response should be shorter than 100 words in Korean.
+Do the following tasks. Response should be shorter than 100 words in English.
 1. Recognizes the feelings expressed by the user. Consider these emotions: ${emotionList}
 2. Reflects these emotions back to the user, acting as an emotional mirror.
 3. Validate the client's feelings, making them feel understood and listened to.
@@ -65,7 +65,7 @@ const reflectNegativeEmotionNoMem = async (userid, diaryid, diary, dialog, emoti
         content: "",
     }
     let task_instruction = `Your task is helping user reflect the reason of their emotions.
-Do the following tasks. For each conversation turn, execute one task only. Response in Korean.
+Do the following tasks. For each conversation turn, execute one task only. Response in English.
 1. Describe what maybe the reason of user's emotion and ask for validation from user.
 2. Your task is challenge the negative thought by questioning its validity and looking for evidence that contradicts it. This can help the individual gain a more balanced perspective and reduce the intensity of their negative emotions.
 Your response should less than 100 words.
@@ -107,7 +107,7 @@ const reflectPositiveEmotionNoMem = async (userid, diaryid, diary, dialog, emoti
         content: "",
     }
     let task_instruction = `Inquire about details to show your interest in what help them have positive emotions.
-Ask only 1 question at a time. Response in Korean.
+Ask only 1 question at a time. Response in English.
 
 Current diary: ${diary}
 
